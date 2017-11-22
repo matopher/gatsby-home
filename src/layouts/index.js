@@ -27,7 +27,7 @@ const Header = () => (
             textDecoration: 'none',
           }}
         >
-          Gatsby
+          Matt Woods
         </Link>
       </h1>
     </div>

@@ -19,7 +19,7 @@ const Header = () => (
         padding: '1.45rem 1.0875rem',
       }}
     >
-      <h1 style={{ margin: 0 }}>
+      <h1 style={{ margin: 0, textAlign: 'center', letterSpacing: '1px' }}>
         <Link
           to="/"
           style={{
@@ -30,6 +30,27 @@ const Header = () => (
           Matt Woods
         </Link>
       </h1>
+      <nav>
+        <ul>
+          <li><Link to='/about'>About</Link></li>
+          <li><Link to='/contact'>Contact</Link></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+)
+
+const Footer = () => (
+  <div className="footer_wrap">
+    <div className="footer">
+      <ul>
+        <li><a href="https://www.linkedin.com/in/matthewchristopherwoods/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://twitter.com/matopher" target="_blank">Twitter</a></li>
+        <li><a href="https://www.instagram.com/matopher/" target="_blank">Instagram</a></li>
+        <li><a href="https://github.com/matopher" target="_blank">Github</a></li>
+      </ul>
+      <hr />
+      <p>Matt Woods</p>
     </div>
   </div>
 )
@@ -37,7 +58,7 @@ const Header = () => (
 const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet
-      title="Gatsby Default Starter"
+      title="Matt Woods"
       meta={[
         { name: 'description', content: 'Sample' },
         { name: 'keywords', content: 'sample, something' },
@@ -54,6 +75,7 @@ const TemplateWrapper = ({ children }) => (
     >
       {children()}
     </div>
+    <Footer />
   </div>
 )
 

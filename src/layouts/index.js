@@ -48,9 +48,8 @@ const Footer = () => (
         <li><a href="https://twitter.com/matopher" target="_blank">Twitter</a></li>
         <li><a href="https://www.instagram.com/matopher/" target="_blank">Instagram</a></li>
         <li><a href="https://github.com/matopher" target="_blank">Github</a></li>
+        <li><a href="https://medium.com/@matopher" target="_blank">Medium</a></li>
       </ul>
-      <hr />
-      <p>Matt Woods</p>
     </div>
   </div>
 );

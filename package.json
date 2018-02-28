@@ -8,6 +8,8 @@
     "gatsby-link": "^1.6.28",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-sass": "^1.0.13",
+    "gatsby-source-medium": "^1.0.12",
+    "gatsby-source-wordpress": "^2.0.61",
     "react-feather": "^1.0.7"
   },
   "keywords": [

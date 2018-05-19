@@ -22,7 +22,7 @@ const IndexPage = () => (
       <div>
       <img src={matt} className="intro__headshot scale-in-center" />
       <h2>Hi, I'm Matt Woods.</h2>
-      <p>I currently lead inbound marketing at a Hubspot partner agency in Norman, Oklahoma. <Link to="/contact">Drop me a note</Link> if you're interested in working together or booking me for a speaking event.</p>
+      <p>I'm currently an inbound marketer at <a href="https://www.tailwindapp.com">Tailwind</a> in Oklahoma. <Link to="/contact">Drop me a note</Link> if you're interested in working together or booking me for a speaking event.</p>
     </div>
     </section>
 

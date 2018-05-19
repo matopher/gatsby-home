@@ -9,8 +9,8 @@ const Contact = () => (
       to get to know each other better.
       </p>
       <p>
-        <a href="mailto:mw@overlapshow.com" className="contact__link" >
-          &#8594; mw@overlapshow.com
+        <a href="mailto:mw@mattwoods.io" className="contact__link" >
+          &#8594; Shoot me an email.
         </a>
       </p>
     </section>

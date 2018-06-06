@@ -64,6 +64,7 @@ const TemplateWrapper = ({ children }) => (
       ]}
     />
     <Header />
+    <meta name="p:domain_verify" content="9d5fe0013168f95ead9ea2be2a7f385f"/>
     <div
       style={{
         margin: '0 auto',

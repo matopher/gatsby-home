@@ -2,8 +2,6 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Img from 'gatsby-image';
 
-// import sign from '../images/sign.jpg';
-
 const About = ({data}) => (
   <div>
     <Img sizes={data.sign.sizes} alt="Matt Woods" className="about__image" />

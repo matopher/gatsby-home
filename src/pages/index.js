@@ -8,7 +8,7 @@ const cta_link = 'https://matt.landinglion.com/29-irresistible-tips-to-land-your
 const IndexPage = ({data}) => (
   <div>
     <section className="headlines center">
-      <BarChart color="rebeccapurple" size="6rem" className="heartbeat" />
+      <BarChart color="#4b73e1" size="6rem" className="heartbeat" />
       <h1>I'm an inbound marketer + front-end web developer who gets results.</h1>
       <h2>I'm on a mission to grow companies by marrying growth-hacking and, well, "actual" hacking.</h2>
       <a href="#intro">Tell me more &#8594;</a>
@@ -24,19 +24,19 @@ const IndexPage = ({data}) => (
 
     <section className="skills center">
       <div className="skills__feature">
-        <TrendingUp color="rebeccapurple" size="4rem" />
+        <TrendingUp color="#22384c" size="4rem" />
         <h3>Marketing</h3>
         <p>Content marketing? Email automation? Social media? I've helped companies grow through digital-first strategies for 4+ years.</p>
       </div>
 
       <div className="skills__feature">
-        <Github color="rebeccapurple" size="4rem" />
+        <Github color="#22384c" size="4rem" />
         <h3>Development</h3>
         <p>I'm currently spending my nights and weekends learning the React Javascript framework and Hubspot COS. Check out <a href="https://github.com/matopher">my Github profile</a> for samples of my past projects.</p>
       </div>
 
       <div className="skills__feature">
-      <Users color="rebeccapurple" size="4rem" />
+      <Users color="#22384c" size="4rem" />
       <h3>Speaking & Teaching</h3>
       <p>Why am I so passionate about speaking and mentoring? Because it makes a difference. I currently mentor a software business development team at the University of Oklahoma and regularly speak at student groups.</p>
     </div>
@@ -68,8 +68,16 @@ const IndexPage = ({data}) => (
         <a href={cta_link} className="offer-cta__link">Get it now &#8594;</a>
       </div>
     </section>
+
+    <section>
+    {data.allMarkdownRemark.edges.map(({ node }) => {
+    return <PostListing post={node} />
+  })}
+    </section>
   </div>
 );
+
+const PostListing = () => <h3>hello</h3>;
 
 export default IndexPage;
 
@@ -96,5 +104,16 @@ query HomePhotos {
       src
     }
   } 
+  allMarkdownRemark {
+    edges {
+      node {
+        frontmatter {
+          title
+          date
+        }
+        html
+      }
+    }
+  }
 }
 `

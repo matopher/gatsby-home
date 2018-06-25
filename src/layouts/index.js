@@ -7,7 +7,7 @@ import styled from 'styled-components'
 import './index.scss';
 
 const HeaderWrapper = styled.div`
-      background: rebeccapurple;
+      background: #22384c;
       margin-bottom: 1.45rem;
       h1 {
         margin: 0;

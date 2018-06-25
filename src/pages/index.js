@@ -20,7 +20,7 @@ const IndexPage = () => (
 
     <section className="intro center" id="intro">
       <div>
-      <img src={matt} className="intro__headshot scale-in-center" />
+      <img src={matt} alt="Matt Woods" className="intro__headshot scale-in-center" />
       <h2>Hi, I'm Matt Woods.</h2>
       <p>I'm currently an inbound marketer at <a href="https://www.tailwindapp.com">Tailwind</a> in Oklahoma. <Link to="/contact">Drop me a note</Link> if you're interested in working together or booking me for a speaking event.</p>
     </div>
@@ -49,14 +49,14 @@ const IndexPage = () => (
     <section className="testimonial__section">
       <div className="testimonial">
         <p>"I found Matt to be an outstanding man of integrity, honesty and a hard worker. Matt was a great self-starter and took the lead on many projects. Matt also is also a very talented writer. His blogs and article were the most read out of any team member."</p>
-        <img src={testimonial_1} className="testimonial__image" />
+        <img src={testimonial_1} alt="Korey McMahon" className="testimonial__image" />
         <h3>Korey McMahon</h3>
         <h4>CEO & Founder, McMahon Marketing</h4>
       </div>
 
       <div className="testimonial">
         <p>"Matt is a smart, confident learner who is willing to adapt and learn everything he can to provide quality work to his team... I would recommend Matt to any team and am confident he will continue to make an impact throughout his career."</p>
-        <img src={testimonial_2} className="testimonial__image" />
+        <img src={testimonial_2} alt="Jen McAbee" className="testimonial__image" />
         <h3>Jen McAbee</h3>
         <h4>Senior Project Manager, Saxum</h4>
       </div>

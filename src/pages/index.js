@@ -2,14 +2,9 @@ import React from 'react';
 import Link from 'gatsby-link';
 import { BarChart, TrendingUp, Github, Users } from 'react-feather';
 
-import matt from '../images/matt.jpg';
-import testimonial_1 from '../images/korey.jpg';
-import testimonial_2 from '../images/jen.jpg';
-import offer_cta from '../images/dream-job.png';
-
 const cta_link = 'https://matt.landinglion.com/29-irresistible-tips-to-land-your-ultimate-dream-job/';
 
-const IndexPage = () => (
+const IndexPage = ({data}) => (
   <div>
     <section className="headlines center">
       <BarChart color="rebeccapurple" size="6rem" className="heartbeat" />
@@ -20,7 +15,7 @@ const IndexPage = () => (
 
     <section className="intro center" id="intro">
       <div>
-      <img src={matt} alt="Matt Woods" className="intro__headshot scale-in-center" />
+      <img src={data.mattImage.sizes.src} alt="Matt Woods" className="intro__headshot scale-in-center" />
       <h2>Hi, I'm Matt Woods.</h2>
       <p>I'm currently an inbound marketer at <a href="https://www.tailwindapp.com">Tailwind</a> in Oklahoma. <Link to="/contact">Drop me a note</Link> if you're interested in working together or booking me for a speaking event.</p>
     </div>
@@ -49,14 +44,14 @@ const IndexPage = () => (
     <section className="testimonial__section">
       <div className="testimonial">
         <p>"I found Matt to be an outstanding man of integrity, honesty and a hard worker. Matt was a great self-starter and took the lead on many projects. Matt also is also a very talented writer. His blogs and article were the most read out of any team member."</p>
-        <img src={testimonial_1} alt="Korey McMahon" className="testimonial__image" />
+        <img src={data.koreyImage.sizes.src} alt="Korey McMahon" className="testimonial__image" />
         <h3>Korey McMahon</h3>
         <h4>CEO & Founder, McMahon Marketing</h4>
       </div>
 
       <div className="testimonial">
         <p>"Matt is a smart, confident learner who is willing to adapt and learn everything he can to provide quality work to his team... I would recommend Matt to any team and am confident he will continue to make an impact throughout his career."</p>
-        <img src={testimonial_2} alt="Jen McAbee" className="testimonial__image" />
+        <img src={data.jenImage.sizes.src} alt="Jen McAbee" className="testimonial__image" />
         <h3>Jen McAbee</h3>
         <h4>Senior Project Manager, Saxum</h4>
       </div>
@@ -65,7 +60,7 @@ const IndexPage = () => (
     <section className="offer-cta center">
       <div>
         <a href={cta_link}>
-          <img src={offer_cta} className="offer-cta__image" />
+          <img src={data.offerCTA.sizes.src} className="offer-cta__image" />
         </a>
         <h2>Hiring is Broken. Why Not Hack It?</h2>
         <p>Want to build evergreen skills, become a networking ninja, and use off-the-wall strategies to catapult yourself into the job you’ve always wanted?</p>
@@ -76,3 +71,28 @@ const IndexPage = () => (
 );
 
 export default IndexPage;
+
+export const query = graphql`
+query HomePhotos {
+  mattImage: imageSharp(id: {regex: "/matt.jpg/"}) {
+    sizes(maxWidth: 1240) {
+      src
+    }
+  } 
+  koreyImage: imageSharp(id: {regex: "/korey.jpg/"}) {
+    sizes(maxWidth: 1240) {
+      src
+    }
+  } 
+  jenImage: imageSharp(id: {regex: "/jen.jpg/"}) {
+    sizes(maxWidth: 1240) {
+      src
+    }
+  } 
+  offerCTA: imageSharp(id: {regex: "/dream-job/"}) {
+    sizes(maxWidth: 1240) {
+      src
+    }
+  } 
+}
+`

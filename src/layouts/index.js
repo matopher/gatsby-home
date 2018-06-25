@@ -96,7 +96,6 @@ query LayoutSiteMeta {
   site {
     siteMetadata {
       title
-      description
     }
   }
 }

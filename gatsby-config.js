@@ -1,11 +1,19 @@
 module.exports = {
   siteMetadata: {
-    title: `Matt Woods`,
-    description: "I'm an inbound marketer + front-end web developer who gets results."
+    title: `Matt Woods`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
-    `gatsby-plugin-styled-components`
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "img",
+        path: `${__dirname}/src/images`
+      }
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`
   ],
 }

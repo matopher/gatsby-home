@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Img from 'gatsby-image';
 import { BarChart, TrendingUp, Github, Users } from 'react-feather';
 
 const cta_link = 'https://matt.landinglion.com/29-irresistible-tips-to-land-your-ultimate-dream-job/';
@@ -15,7 +16,7 @@ const IndexPage = ({data}) => (
 
     <section className="intro center" id="intro">
       <div>
-      <img src={data.mattImage.sizes.src} alt="Matt Woods" className="intro__headshot scale-in-center" />
+      <Img sizes={data.mattImage.sizes} alt="Matt Woods" className="intro__headshot scale-in-center" />
       <h2>Hi, I'm Matt Woods.</h2>
       <p>I'm currently an inbound marketer at <a href="https://www.tailwindapp.com">Tailwind</a> in Oklahoma. <Link to="/contact">Drop me a note</Link> if you're interested in working together or booking me for a speaking event.</p>
     </div>
@@ -77,6 +78,7 @@ query HomePhotos {
   mattImage: imageSharp(id: {regex: "/matt.jpg/"}) {
     sizes(maxWidth: 1240) {
       src
+      ...GatsbyImageSharpSizes
     }
   } 
   koreyImage: imageSharp(id: {regex: "/korey.jpg/"}) {

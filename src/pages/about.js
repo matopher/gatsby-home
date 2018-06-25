@@ -1,11 +1,12 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import Img from 'gatsby-image';
 
-import sign from '../images/sign.jpg';
+// import sign from '../images/sign.jpg';
 
-const About = () => (
+const About = ({data}) => (
   <div>
-    <img src={sign} alt="Matt Woods" className="about__image" />
+    <Img sizes={data.sign.sizes} alt="Matt Woods" className="about__image" />
     <h1>Who is this "Matt Woods" character anyways?</h1>
     <p>Here's a quick peek intro my core values so you can understand what I'm really about.</p>
 
@@ -34,3 +35,13 @@ const About = () => (
 );
 
 export default About;
+
+export const query = graphql`
+query AboutPhotos {
+  sign: imageSharp(id: {regex: "/sign.jpg/"}) {
+    sizes(maxWidth: 1240) {
+      ...GatsbyImageSharpSizes
+    }
+  } 
+}
+`

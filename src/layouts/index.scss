@@ -892,7 +892,9 @@ hr {
 
 // ANIMATIONS
 .heartbeat {
-	animation: heartbeat 1.5s ease-in-out infinite both;
+  animation: heartbeat 1.5s ease-in-out infinite both;
+  stroke-width: 4px;
+  stroke-linecap: round;
 }
 
 .scale-in-center {

@@ -2,16 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
+import styled from 'styled-components'
 
 import './index.scss';
 
-const Header = () => (
-  <div
-    style={{
-      background: 'rebeccapurple',
-      marginBottom: '1.45rem',
-    }}
-  >
+const HeaderWrapper = styled.div`
+      background: rebeccapurple;
+      margin-bottom: 1.45rem;
+      h1 {
+        margin: 0;
+        text-align: center;
+        letter-spacing: 1px; 
+      }
+`;
+
+const Header = ({data}) => (
+  <HeaderWrapper>
     <div
       style={{
         margin: '0 auto',
@@ -19,7 +25,7 @@ const Header = () => (
         padding: '1.45rem 1.0875rem',
       }}
     >
-      <h1 style={{ margin: 0, textAlign: 'center', letterSpacing: '1px' }}>
+      <h1>
         <Link
           to="/"
           style={{
@@ -27,7 +33,7 @@ const Header = () => (
             textDecoration: 'none',
           }}
         >
-          Matt Woods
+        {data.site.siteMetadata.title}
         </Link>
       </h1>
       <nav>
@@ -37,7 +43,7 @@ const Header = () => (
         </ul>
       </nav>
     </div>
-  </div>
+  </HeaderWrapper>
 );
 
 const Footer = () => (
@@ -54,7 +60,7 @@ const Footer = () => (
   </div>
 );
 
-const TemplateWrapper = ({ children }) => (
+const TemplateWrapper = ({ children, data }) => (
   <div>
     <Helmet
       title="Matt Woods"
@@ -63,7 +69,7 @@ const TemplateWrapper = ({ children }) => (
         { name: 'keywords', content: 'sample, something' },
       ]}
     />
-    <Header />
+    <Header data={data} />
     <meta name="p:domain_verify" content="9d5fe0013168f95ead9ea2be2a7f385f"/>
     <div
       style={{
@@ -84,3 +90,14 @@ TemplateWrapper.propTypes = {
 };
 
 export default TemplateWrapper;
+
+export const query = graphql`
+query LayoutSiteMeta {
+  site {
+    siteMetadata {
+      title
+      description
+    }
+  }
+}
+`

@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import Img from 'gatsby-image';
 import { BarChart, TrendingUp, Github, Users } from 'react-feather';
 import PostListing from '../components/Posts/PostListing';
 
@@ -23,16 +22,16 @@ const IndexPage = ({ data }) => (
 
     <section className="intro center" id="intro">
       <div>
-        <Img
-          sizes={data.mattImage.sizes}
+        <img
+          src={data.mattImage.sizes.src}
           alt="Matt Woods"
           className="intro__headshot scale-in-center"
         />
         <h2>Hi, I'm Matt Woods.</h2>
         <p>
           I'm currently an inbound marketer at{' '}
-          <a href="https://www.tailwindapp.com">Tailwind</a> in Oklahoma.{' '}
-          <Link to="/contact">Drop me a note</Link> if you're interested in
+          <a href="https://www.tailwindapp.com">Tailwind</a> in Oklahoma.
+          <Link to="/contact"> Drop me a note</Link> if you're interested in
           working together or booking me for a speaking event.
         </p>
       </div>
@@ -53,14 +52,14 @@ const IndexPage = ({ data }) => (
         <h3>Development</h3>
         <p>
           I'm currently spending my nights and weekends learning the React
-          Javascript framework and Hubspot COS. Check out{' '}
+          Javascript framework and Hubspot COS. Check out
           <a href="https://github.com/matopher">my Github profile</a> for
           samples of my past projects.
         </p>
       </div>
 
       <div className="skills__feature">
-        <Users color="rebeccapurple" size="4rem" />
+        <Users color="#22384C" size="4rem" />
         <h3>Speaking & Teaching</h3>
         <p>
           Why am I so passionate about speaking and mentoring? Because it makes
@@ -120,7 +119,6 @@ export const query = graphql`
     mattImage: imageSharp(id: { regex: "/matt.jpg/" }) {
       sizes(maxWidth: 1240) {
         src
-        ...GatsbyImageSharpSizes
       }
     }
     koreyImage: imageSharp(id: { regex: "/korey.jpg/" }) {

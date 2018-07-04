@@ -5,7 +5,7 @@ import PostListing from '../components/Posts/PostListing';
 const Blog = ({ data }) => (
   <div>
     <section className="center">
-      <h1>Blog</h1>
+      <h1 style={{ fontSize: '3.5em' }}>Blog</h1>
     </section>
 
     <section>

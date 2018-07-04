@@ -104,7 +104,15 @@ const IndexPage = ({ data }) => (
     </section>
 
     <section>
-      <h2>Recent Posts</h2>
+      <h2
+        style={{
+          fontSize: '3em',
+          textAlign: 'center',
+          marginTop: '1em'
+        }}
+      >
+        Recent Posts
+      </h2>
       {data.allMarkdownRemark.edges.map(({ node }) => (
         <PostListing key={node.id} post={node} />
       ))}

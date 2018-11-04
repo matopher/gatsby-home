@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 const BlogPost = styled.article`
   width: 878px;
-  margin: 0 auto 100px;
+  margin: 0 auto 5rem;
   background: #fff;
-  padding: 75px 0;
+  padding: 1em 0;
   border: 1px solid #eaecee;
   border-radius: 4px;
   position: relative;
@@ -18,11 +18,18 @@ const BlogPost = styled.article`
     -webkit-box-shadow, -webkit-transform;
   -webkit-transition-duration: 0.15s;
   transition-duration: 0.15s;
+  max-width: 100%;
+
+  .post-inner-content {
+    max-width: 100%;
+  }
 `;
 
 const Content = styled.div`
-  width: 578px;
+  width: 100%;
+  max-width: 700px;
   margin: 0 auto;
+  padding: 2em 1em;
 `;
 
 export default class PostPage extends Component {
@@ -33,6 +40,7 @@ export default class PostPage extends Component {
         <Content>
           <h1>{data.markdownRemark.frontmatter.title}</h1>
           <div
+            className="post-inner-content"
             dangerouslySetInnerHTML={{
               __html: data.markdownRemark.html
             }}

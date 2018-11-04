@@ -51,10 +51,11 @@ const IndexPage = ({ data }) => (
         <Github color="#22384c" size="4rem" />
         <h3>Development</h3>
         <p>
-          I'm currently spending my nights and weekends learning the React
-          Javascript framework and Hubspot COS. Check out
-          <a href="https://github.com/matopher">my Github profile</a> for
-          samples of my past projects.
+          I'm currently spending my nights and weekends learning Laravel and
+          React. Check out &nbsp;<a href="https://github.com/matopher">
+            my Github profile
+          </a>{' '}
+          for samples of my past projects.
         </p>
       </div>
 
@@ -63,8 +64,8 @@ const IndexPage = ({ data }) => (
         <h3>Speaking & Teaching</h3>
         <p>
           Why am I so passionate about speaking and mentoring? Because it makes
-          a difference. I currently mentor a software business development team
-          at the University of Oklahoma and regularly speak at student groups.
+          a difference. I regularly guest lecture with students at the
+          University of Oklahoma.
         </p>
       </div>
     </section>

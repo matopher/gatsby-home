@@ -45,6 +45,9 @@ const Header = ({ data }) => (
             <Link to="/blog">Blog</Link>
           </li>
           <li>
+            <Link to="/picks">Picks</Link>
+          </li>
+          <li>
             <Link to="/contact">Contact</Link>
           </li>
         </ul>

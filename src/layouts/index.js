@@ -104,6 +104,21 @@ const TemplateWrapper = ({ children, data }) => (
     />
     <Header data={data} />
     <meta name="p:domain_verify" content="9d5fe0013168f95ead9ea2be2a7f385f" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@matopher" />
+    <meta name="twitter:title" content="Matt Woods: Marketer + Developer" />
+    <meta name="twitter:description" content="Crazy about good books, growing businesses through honest marketing, and making everyone around me feel loved. Join me on my journey." />
+    <meta name="twitter:creator" content="@matopher" />
+   
+    <meta name="twitter:image" content="/meta-image--matt-woods.png" />
+
+   
+    <meta property="og:title" content="Matt Woods: Marketer + Developer" />
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="/meta-image--matt-woods.png" />
+    <meta property="og:description" content="Crazy about good books, growing businesses through honest marketing, and making everyone around me feel loved. Join me on my journey." /> 
+    <meta property="og:site_name" content="Matt Woods: Marketer + Developer" />
     <div
       style={{
         margin: '0 auto',

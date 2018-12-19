@@ -95,16 +95,8 @@ const Footer = () => (
 
 const TemplateWrapper = ({ children, data }) => (
   <div>
-    <Helmet
+      <Helmet>
       title="Matt Woods"
-      meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' }
-      ]}
-    />
-    <Header data={data} />
-    <meta name="p:domain_verify" content="9d5fe0013168f95ead9ea2be2a7f385f" />
-    
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@matopher" />
     <meta name="twitter:title" content="Matt Woods: Marketer + Developer" />
@@ -119,6 +111,10 @@ const TemplateWrapper = ({ children, data }) => (
     <meta property="og:image" content="/meta-image--matt-woods.png" />
     <meta property="og:description" content="Crazy about good books, growing businesses through honest marketing, and making everyone around me feel loved. Join me on my journey." /> 
     <meta property="og:site_name" content="Matt Woods: Marketer + Developer" />
+    </Helmet>
+    <Header data={data} />
+    <meta name="p:domain_verify" content="9d5fe0013168f95ead9ea2be2a7f385f" />
+    
     <div
       style={{
         margin: '0 auto',

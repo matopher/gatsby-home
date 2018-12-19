@@ -12,7 +12,7 @@ const Picks = ({ data }) => (
       in some small way.
     </p>
     <p>
-      I use affiliate links for Amazon products so I can buy more cool stuff to review for you. Hopefully that's cool
+      I use affiliate links for Amazon products so I can buy more cool stuff to review. Hopefully that's cool
       with you. 🤙🏻
     </p>
 

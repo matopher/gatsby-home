@@ -23,13 +23,24 @@ const PostListingWrapper = styled.article`
     margin-bottom: 0.5em;
   }
   a {
-    margin-top: 0.25em;
     display: inline-block;
     text-decoration: none;
+  }
+  .read-more {
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .5px;
   }
   p {
     margin-bottom: 0;
   }
+  span {
+    margin-bottom: .5rem;
+    display: inline-block;
+    font-size: .9rem;
+    color: #808080;
+}
 `;
 
 const PostListing = ({ post }) => (
@@ -42,10 +53,8 @@ const PostListing = ({ post }) => (
     <Link
       to={post.fields.slug}
       style={{
-        textTransform: 'uppercase',
-        fontWeight: 700,
-        fontSize: '.85rem'
       }}
+      className="read-more"
     >
       Read More &rarr;
     </Link>

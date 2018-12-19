@@ -145,12 +145,13 @@ export const query = graphql`
         src
       }
     }
-    allMarkdownRemark {
+    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
       edges {
         node {
           id
           frontmatter {
             title
+            date(formatString: "MMMM DD, YYYY")
           }
           html
           excerpt

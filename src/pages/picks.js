@@ -55,7 +55,7 @@ const Picks = ({ data }) => (
         <a href="https://amzn.to/2Lnh1Bs">Shoe Dog: A Memoir by the Creator of Nike</a>
       </li>
       <li>
-        <a href="https://amzn.to/2SeSJwp">Influence: The Psychology of Persuasio</a>
+        <a href="https://amzn.to/2SeSJwp">Influence: The Psychology of Persuasion</a>
       </li>
       <li>
         <a href="https://amzn.to/2LpH4bb">They Call Me Supermensch</a>

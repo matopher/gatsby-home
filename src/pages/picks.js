@@ -118,6 +118,9 @@ const Picks = ({ data }) => (
       <li>
         <a href="https://amzn.to/2S8Zgsl">Confessions of an Advertising Man</a>
       </li>
+      <li>
+        <a href="https://amzn.to/2R0WDvp">Building a StoryBrand: Clarify Your Message So Customers Will Listen</a>
+      </li>
     </ul>
 
     <h2>🎧 Podcasts</h2>

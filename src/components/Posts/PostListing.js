@@ -41,6 +41,18 @@ const PostListingWrapper = styled.article`
     font-size: .9rem;
     color: #808080;
 }
+.post-date {
+    margin-bottom: .75rem;
+    display: inline-block;
+    font-size: .9rem;
+    color: #808080;
+    display: inline-flex;
+    align-items: center;
+    svg {
+        max-height: 14px !important;
+        fill: #808080;
+    }
+  }
 `;
 
 const PostListing = ({ post }) => (
@@ -48,7 +60,10 @@ const PostListing = ({ post }) => (
     <h3>
       <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
     </h3>
-    <span>{post.frontmatter.date}</span>
+    <span className="post-date">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path class="heroicon-ui" d="M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm1-8.41l2.54 2.53a1 1 0 0 1-1.42 1.42L11.3 12.7A1 1 0 0 1 11 12V8a1 1 0 0 1 2 0v3.59z"/></svg>
+      {post.frontmatter.date}
+  </span>
     <p>{post.excerpt}</p>
     <Link
       to={post.fields.slug}

@@ -108,7 +108,7 @@ const TemplateWrapper = ({ children, data }) => (
    
     <meta property="og:title" content="Matt Woods: Marketer + Developer" />
     <meta property="og:type" content="article" />
-    <meta property="og:image" content="/meta-image--matt-woods.png" />
+    <meta property="og:image" content={data.metaImage.sizes.src} />
     <meta property="og:description" content="Crazy about good books, growing businesses through honest marketing, and making everyone around me feel loved. Join me on my journey." /> 
     <meta property="og:site_name" content="Matt Woods: Marketer + Developer" />
     </Helmet>
@@ -137,6 +137,12 @@ export default TemplateWrapper;
 
 export const query = graphql`
   query LayoutSiteMeta {
+      metaImage: imageSharp(id: {regex: "/meta/"}) {
+      sizes(maxWidth: 1240) {
+        src
+      }
+    }
+    # meta
     site {
       siteMetadata {
         title
